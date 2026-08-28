@@ -1,0 +1,25 @@
+name: 🌐 Documentation publish
+
+on:
+    push:
+        branches:
+            - main
+        
+permissions:
+    contents: write
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1 - https://github.com/actions/checkout
+
+            - uses: actions/setup-python@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0 - https://github.com/actions/setup-python
+              with:
+                python-version: 3.13
+            
+            - run: pip install 'mkdocs>=1.5' mkdocs-material
+
+            - run: echo "forgefolio-docs.loutik.fr" > docs/CNAME
+
+            - run: mkdocs gh-deploy --config-file docs/mkdocs.yaml --force
