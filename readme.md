@@ -10,7 +10,7 @@ Le site est généré avec [MkDocs](https://www.mkdocs.org/) et le thème
 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). Les
 modifications poussées sur `main` sont publiées automatiquement par GitHub Actions.
 
-**Documentation en ligne :** [forgefolio-docs.loutik.fr](https://forgefolio-docs.loutik.fr)
+**Documentation en ligne :** [forgefolio-docs](https://firetoak.github.io/forgefolio-docs)
 
 > Une migration vers [Zensical](https://zensical.org/docs/get-started/) est prévue.
 
